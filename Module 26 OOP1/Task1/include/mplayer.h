@@ -21,15 +21,16 @@ class MPlayer {
     pState pstate = pState::STOPPED;
 
 public:
+    ~MPlayer();
     unsigned int getListSize();
-    pState getPlaybackState();
     void showTrackList();
     void stop();
     void pause();
     void play();
     void play(int trackidx);
     void next();
-    void addtrack(std::string tname, std::string dateCr, unsigned int length );
+    void addtrack();
+    void deleteTrack(int trackIndex);
 };
 
 #endif //OOP_HT1_MPLAYER_H
