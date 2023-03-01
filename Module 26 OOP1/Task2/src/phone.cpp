@@ -26,9 +26,10 @@ void Phone::operate() {
 bool Phone::execute(std::string &cmd) {
     int action = this->getCmdIndex(cmd);
     if (action == static_cast<int>(phoneCmd::EXIT)) return true;
-    if (action == -1) {
-        std::cout << "Unknown instruction\n";
-    }
+    if (action == static_cast<int>(phoneCmd::CALL)) this->makeCall();
+    else if (action == static_cast<int>(phoneCmd::ADD)) this->addRecord();
+    else if (action == static_cast<int>(phoneCmd::SMS)) this->sendSMS();
+    else std::cout << "Unknown instruction\n";
     return false;
 }
 
@@ -38,6 +39,35 @@ int Phone::getCmdIndex(std::string &cmd) {
         if (phoneMenu[i] == cmd) return i;
     }
     return -1;
+}
+
+void Phone::makeCall() {
+    std::cout << "Enter number (with leading +) or name for call:";
+    std::string str;
+    std::cin >> str;
+    if (addrinstance == nullptr) {
+        call(str);
+    } else {
+        std::cout << "Search in address book\n";
+    }
+}
+
+void Phone::call(std::string &str) {
+    std::cout << "Attempt to call to " << str << std::endl;
+}
+
+void Phone::sendSMS() {
+    std::cout << "Enter number (with leading +) or name to send SMS:";
+    std::string str;
+    std::cin >> str;
+    std::cout << "SMS\n";
+}
+
+void Phone::addRecord() {
+    std::cout << "Enter record (number name) to add to address bool:";
+    std::string str;
+    std::cin >> str;
+    std::cout << "Record\n";
 }
 
 void Phone::showMenu () {

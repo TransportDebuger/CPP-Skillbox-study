@@ -19,6 +19,8 @@ class Phone {
     void showMenu();
     int getCmdIndex(std::string &cmd);
     void makeCall();
+    void call(std::string &str);
+//    std::string getPhone();
     void sendSMS();
     void addRecord();
 public:

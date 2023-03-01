@@ -8,9 +8,10 @@
 #define CELLPHONE_ADDRBOOK_H
 
 class AddressBook {
-public:
+private:
     int phone;
     int id;
+public:
 };
 
 /*class PhoneRecord {
