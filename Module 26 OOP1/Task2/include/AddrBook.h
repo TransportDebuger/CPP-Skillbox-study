@@ -3,25 +3,24 @@
 //
 
 #include <string>
+#include <map>
+#include <string>
+#include <vector>
+
 
 #ifndef CELLPHONE_ADDRBOOK_H
 #define CELLPHONE_ADDRBOOK_H
 
 class AddressBook {
 private:
-    int phone;
-    int id;
+    static AddressBook* instance;
+    std::map<std::string, std::string> phoneIndex;
+    std::map<std::string, std::string>::iterator itPhone;
+    AddressBook();
 public:
+    static AddressBook* getInstance();
+    bool addRecord(const std::string phNum, const std::string phOwn);
+    bool findNumber(const std::string phNum, std::map<std::string, std::string>::iterator &it);
 };
-
-/*class PhoneRecord {
-private:
-    std::string name;
-    std::string phone;
-public:
-    PhoneRecord();
-    std::string getName();
-    std::string getPhone();
-};*/
 
 #endif //CELLPHONE_ADDRBOOK_H

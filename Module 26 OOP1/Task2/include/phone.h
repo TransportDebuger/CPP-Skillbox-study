@@ -15,7 +15,7 @@ enum class phoneCmd {
 };
 
 class Phone {
-    AddressBook* addrinstance = 0;
+    AddressBook* addrinstance = nullptr;
     void showMenu();
     int getCmdIndex(std::string &cmd);
     void makeCall();

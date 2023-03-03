@@ -5,13 +5,17 @@
 #include <iostream>
 #include <string>
 #include "phone.h"
+#include "AddrBook.h"
 
 Phone::Phone() {
+    this->addrinstance = AddressBook::getInstance();
     std::cout << "Cell phone is ready to use.\n";
+    std::cout << addrinstance << std::endl;
 }
 
 Phone::~Phone() {
     std::cout << "Phone shutting down!\nBye! Bye!\n";
+    delete addrinstance;
 }
 
 void Phone::operate() {
@@ -42,14 +46,11 @@ int Phone::getCmdIndex(std::string &cmd) {
 }
 
 void Phone::makeCall() {
-    std::cout << "Enter number (with leading +) or name for call:";
+    std::cout << "Enter number (with leading +7) or name for call:";
     std::string str;
     std::cin >> str;
-    if (addrinstance == nullptr) {
-        call(str);
-    } else {
-        std::cout << "Search in address book\n";
-    }
+    call(str);
+    std::cout << "Search in address book\n";
 }
 
 void Phone::call(std::string &str) {
@@ -57,16 +58,16 @@ void Phone::call(std::string &str) {
 }
 
 void Phone::sendSMS() {
-    std::cout << "Enter number (with leading +) or name to send SMS:";
+    std::cout << "Enter number (with leading +7) or name to send SMS:";
     std::string str;
     std::cin >> str;
     std::cout << "SMS\n";
 }
 
 void Phone::addRecord() {
-    std::cout << "Enter record (number name) to add to address bool:";
-    std::string str;
-    std::cin >> str;
+    std::cout << "Enter record (number name) to add to address book:";
+    std::string phone, owner;
+    std::cin >> phone;
     std::cout << "Record\n";
 }
 
