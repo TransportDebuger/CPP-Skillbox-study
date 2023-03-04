@@ -7,6 +7,18 @@
 #include "phone.h"
 #include "AddrBook.h"
 
+bool isCorrectPhone(const std::string &str) {
+    int sCounter = 0;
+    if (str[sCounter] != '+') return false;
+    sCounter = 1;
+    //if (str.size()!=11) return false;
+    while (sCounter<str.size()) {
+        if (!(str[sCounter]>='0' && str[sCounter]<='9')) return false;
+        sCounter++;
+    }
+    return true;
+}
+
 Phone::Phone() {
     this->addrinstance = AddressBook::getInstance();
     std::cout << "Cell phone is ready to use.\n";
@@ -46,11 +58,15 @@ int Phone::getCmdIndex(std::string &cmd) {
 }
 
 void Phone::makeCall() {
-    std::cout << "Enter number (with leading +7) or name for call:";
     std::string str;
+    std::cout << "Enter number (with leading +7) or name for call: ";
     std::cin >> str;
-    call(str);
-    std::cout << "Search in address book\n";
+    //Нужно устранить проблему с getline
+    //std::getline(std::cin, str);
+    if (isCorrectPhone(str)) {
+        addrinstance->findName(str);
+        call(str);
+    } else std::cout << "Is not correct phone number\n";
 }
 
 void Phone::call(std::string &str) {
@@ -61,13 +77,19 @@ void Phone::sendSMS() {
     std::cout << "Enter number (with leading +7) or name to send SMS:";
     std::string str;
     std::cin >> str;
+    //std::getline(std::cin, str);
+    if (isCorrectPhone(str)) {
+        addrinstance->findName(str);
+        std::cout << "Send SMS to " << str << std::endl;
+    } else std::cout << "Is not correct phone number\n";
     std::cout << "SMS\n";
 }
 
 void Phone::addRecord() {
     std::cout << "Enter record (number name) to add to address book:";
     std::string phone, owner;
-    std::cin >> phone;
+    std::cin >> phone >> owner;
+    addrinstance->addRecord(phone, owner);
     std::cout << "Record\n";
 }
 
@@ -78,3 +100,4 @@ void Phone::showMenu () {
     std::cout << "    sms  - send sms to ...\n";
     std::cout << "    exit - for make\n";
 }
+

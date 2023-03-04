@@ -23,6 +23,7 @@ class Phone {
 //    std::string getPhone();
     void sendSMS();
     void addRecord();
+    friend bool isCorrectPhone(const std::string &str);
 public:
     Phone();
     ~Phone();

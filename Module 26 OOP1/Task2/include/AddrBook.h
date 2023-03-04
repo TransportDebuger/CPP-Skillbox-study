@@ -21,6 +21,7 @@ public:
     static AddressBook* getInstance();
     bool addRecord(const std::string phNum, const std::string phOwn);
     bool findNumber(const std::string phNum, std::map<std::string, std::string>::iterator &it);
+    void findName(std::string &str);
 };
 
 #endif //CELLPHONE_ADDRBOOK_H
