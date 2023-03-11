@@ -11,7 +11,6 @@ bool isCorrectPhone(const std::string &str) {
     int sCounter = 0;
     if (str[sCounter] != '+') return false;
     sCounter = 1;
-    //if (str.size()!=11) return false;
     while (sCounter<str.size()) {
         if (!(str[sCounter]>='0' && str[sCounter]<='9')) return false;
         sCounter++;
@@ -22,7 +21,6 @@ bool isCorrectPhone(const std::string &str) {
 Phone::Phone() {
     this->addrinstance = AddressBook::getInstance();
     std::cout << "Cell phone is ready to use.\n";
-    std::cout << addrinstance << std::endl;
 }
 
 Phone::~Phone() {
@@ -66,7 +64,9 @@ void Phone::makeCall() {
     if (isCorrectPhone(str)) {
         addrinstance->findName(str);
         call(str);
-    } else std::cout << "Is not correct phone number\n";
+    } else {
+        if (addrinstance->findNumber(str)) call(str);
+    }
 }
 
 void Phone::call(std::string &str) {
@@ -80,9 +80,20 @@ void Phone::sendSMS() {
     //std::getline(std::cin, str);
     if (isCorrectPhone(str)) {
         addrinstance->findName(str);
-        std::cout << "Send SMS to " << str << std::endl;
-    } else std::cout << "Is not correct phone number\n";
-    std::cout << "SMS\n";
+        std::cout << "SMS to " << str << std::endl;
+        std::cout << "Enter message: ";
+        std::string sMsg;
+        std::getline(std::cin, sMsg);
+        std::cout << "Message to " << str << " sent\n";
+    } else {
+        if (addrinstance->findNumber(str)) {
+            std::cout << "SMS to " << str << std::endl;
+            std::cout << "Enter message: ";
+            std::string sMsg;
+            std::getline(std::cin, sMsg);
+            std::cout << "Message to " << str << " sent\n";
+        }
+    };
 }
 
 void Phone::addRecord() {
@@ -90,7 +101,6 @@ void Phone::addRecord() {
     std::string phone, owner;
     std::cin >> phone >> owner;
     addrinstance->addRecord(phone, owner);
-    std::cout << "Record\n";
 }
 
 void Phone::showMenu () {

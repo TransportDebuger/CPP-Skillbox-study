@@ -11,16 +11,24 @@
 #ifndef CELLPHONE_ADDRBOOK_H
 #define CELLPHONE_ADDRBOOK_H
 
+struct phoneRecord {
+    std::string phone;
+    std::string owner;
+};
+
 class AddressBook {
 private:
     static AddressBook* instance;
-    std::map<std::string, std::string> phoneIndex;
-    std::map<std::string, std::string>::iterator itPhone;
+    std::vector<phoneRecord> records;
+    std::map<std::string, int> phoneIndex;
+    std::map<std::string, int>::iterator itPhone;
+    std::map<std::string, std::vector<int>> ownerIndex;
+    std::map<std::string, std::vector<int>>::iterator itOwner;
     AddressBook();
 public:
     static AddressBook* getInstance();
     bool addRecord(const std::string phNum, const std::string phOwn);
-    bool findNumber(const std::string phNum, std::map<std::string, std::string>::iterator &it);
+    bool findNumber(std::string &str);
     void findName(std::string &str);
 };
 
