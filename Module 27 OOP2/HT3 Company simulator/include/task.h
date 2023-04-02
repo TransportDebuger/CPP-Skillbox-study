@@ -1,0 +1,8 @@
+//
+// Created by Artem on 02.04.2023.
+//
+
+#ifndef COMPANY_SIMULATOR_TASK_H
+#define COMPANY_SIMULATOR_TASK_H
+
+#endif //COMPANY_SIMULATOR_TASK_H
