@@ -13,6 +13,7 @@
 class Person //Common class for all workers
 {
     std::string name; //Worker name
+    int personID = 0;
     Person();
 public:
     ~Person();

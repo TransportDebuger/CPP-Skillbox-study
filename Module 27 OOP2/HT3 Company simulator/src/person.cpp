@@ -5,9 +5,16 @@
 #include <iostream>
 #include "person.h"
 
+int setPersonId() {
+    static int counter = 0;
+    return ++counter;
+}
+
 Person::Person() {
     std::cout << "Name of the person: ";
     std::cin >> this->name;
+    this->personID = setPersonId();
+    std::cout << "His person ID " << this->personID << std::endl;
 }
 
 Person* Person::create() {
