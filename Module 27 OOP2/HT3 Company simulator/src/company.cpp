@@ -9,7 +9,11 @@
 Company::Company() {
     std::cout << "Name your company: ";
     std::cin >> this->name;
+<<<<<<< HEAD
     std::cout << "Tell something about company head\n";
+=======
+    std::cout << "Tell something about company CEO\n";
+>>>>>>> 2da7575d4460d3807a544cbae1e658cc4d624352
     this->companyHead = Person::create();
     std::cout << "How many teams in the company: ";
     std::cin >> this->depsAmount;
@@ -28,12 +32,30 @@ Company::~Company() {
     }
 }
 
+<<<<<<< HEAD
 Company *Company::create() {
+=======
+Company* Company::create() {
+>>>>>>> 2da7575d4460d3807a544cbae1e658cc4d624352
     Company* p;
     p = new Company();
     return p;
 }
 
+<<<<<<< HEAD
+=======
+std::string Company::getCompanyName() {
+    return this->name;
+}
+
+void Company::showCompanyInfo() {
+    std::cout << "Company: " << this->getCompanyName() << std::endl;
+    std::cout << "Company CEO: " << this->companyHead->getPersonName() << " " 
+        << this->companyHead->getPersonId() << std::endl;
+    std::cout << "Count of Departments: " << this->depsAmount << std::endl;
+}
+
+>>>>>>> 2da7575d4460d3807a544cbae1e658cc4d624352
 Department::Department() {
     std::cout << "How many workers in team: ";
     std::cin >> this->workersAmount;
@@ -45,7 +67,10 @@ Department::Department() {
         std::cout << "Create worker #" << i << std::endl;
         this->workers[i] = Person::create();
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2da7575d4460d3807a544cbae1e658cc4d624352
 }
 
 Department *Department::create() {
