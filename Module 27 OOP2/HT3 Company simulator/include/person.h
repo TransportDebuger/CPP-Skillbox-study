@@ -8,18 +8,16 @@
 #ifndef COMPANY_SIMULATOR_PERSON_H
 #define COMPANY_SIMULATOR_PERSON_H
 
-//enum class PositionType { Head, Teamlead, Worker}; //Type of workers
-
 class Person //Common class for all workers
 {
     std::string name; //Worker name
-    int personID = 0; //Personal ID setted automaticaly setPersonId().
+    int personID = 0; //It sets when Person creating setPersonId().
     Person();
 public:
     ~Person();
-    int getPersonId();
-    std::string getPersonName();
     static Person* create();
+    int getPersonId() const;
+    std::string getPersonName();
 };
 
 #endif //COMPANY_SIMULATOR_PERSON_H

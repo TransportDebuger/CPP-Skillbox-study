@@ -7,38 +7,17 @@
 #ifndef COMPANY_SIMULATOR_TASK_H
 #define COMPANY_SIMULATOR_TASK_H
 
+struct TaskIdentifier {
+    int id;
+    char type;
+};
+
 class Task {
-    char taskType;
-    int taskId;
+    TaskIdentifier taskId;
+    Task();
 public:
-    virtual void getInfo() = 0;
-    virtual Task* create();
-    virtual Task* create(int inTaskId, int inPersonId);
     ~Task() = default;
+    static Task* create(int inTaskInput, int inPersonId);
 };
-
-class MainTask : public Task {
-public:
-    void getInfo();
-    MainTask();
-    ~MainTask();
-};
-
-class SubTask : public Task {
-    MainTask* parent;
-public:
-    void getInfo();
-    SubTask();
-    SubTask(int inTaskId);
-    ~SubTask();
-};
-
-class TaskManager {
-    TaskManager* instance = nullptr;
-    TaskManager()
-public:
-    static TaskManager* TaskManager::create();
-    ~TaskManager();
-}
 
 #endif //COMPANY_SIMULATOR_TASK_H

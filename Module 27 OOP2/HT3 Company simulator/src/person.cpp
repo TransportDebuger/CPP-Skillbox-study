@@ -6,28 +6,26 @@
 #include "person.h"
 
 int setPersonId() {
-    static int counter = 0;
+    static int counter = -1;
     return ++counter;
 }
 
 Person::Person() {
-    std::cout << "Name of the person: ";
+    std::cout << "Name: ";
     std::cin >> this->name;
     this->personID = setPersonId();
-    std::cout << "His person ID " << this->personID << std::endl;
 }
 
 Person* Person::create() {
-    Person* p;
-    p = new Person();
+    Person* p = new Person();
     return p;
 }
 
-int getPersonId() {
+int Person::getPersonId() const {
     return this->personID;
 }
 
-std::string getPersonName() {
+std::string Person::getPersonName() {
     return this->name;
 }
 

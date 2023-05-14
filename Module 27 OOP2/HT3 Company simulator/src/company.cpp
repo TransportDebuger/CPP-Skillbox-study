@@ -9,7 +9,7 @@
 Company::Company() {
     std::cout << "Name your company: ";
     std::cin >> this->name;
-    std::cout << "Tell something about company head\n";
+    std::cout << "Tell something about company CEO\n";
     this->companyHead = Person::create();
     std::cout << "How many teams in the company: ";
     std::cin >> this->depsAmount;
@@ -43,7 +43,7 @@ void Company::showCompanyInfo() {
     std::cout << "Company CEO: " << this->companyHead->getPersonName() << " " 
         << this->companyHead->getPersonId() << std::endl;
     std::cout << "Count of Departments: " << this->depsAmount << std::endl;
-};
+}
 
 Department::Department() {
     std::cout << "How many workers in team: ";

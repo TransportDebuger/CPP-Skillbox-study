@@ -24,7 +24,7 @@ class Company {
     std::string name; //Company name
     Person* companyHead;
     int depsAmount = 0; //Amount of teams (deps) in company
-    Department** departments = nullptr; //Array of departments;
+    Department** departments = nullptr; //Array of departments (teams);
     Company();
 public:
     static Company* create();
