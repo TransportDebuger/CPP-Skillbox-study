@@ -7,7 +7,14 @@
 int main() {
     std::cout << "Company simulator!" << std::endl;
     Company* company = Company::create();
-    company->showCompanyInfo();
+    std::string command;
+    do {
+        std::cout << "CLI > ";
+        std::cin >> command;
+        if (command == "info") company->showCompanyInfo();
+    } while (command != "exit");
+
+
     delete company;
     return 0;
 }
