@@ -8,7 +8,7 @@
 #include "person.h"
 
 int setPersonId() {
-    static int id = 0;
+    static int id = 1;
     return id++;
 }
 
@@ -32,18 +32,21 @@ void Worker::info() {
 CEO::CEO(IUnit* inUnit) {
     this->name = setPersonName();
     this->appointedUnit = inUnit;
+    this->id = setPersonId();
     info();
 }
 
 Teamlead::Teamlead(IUnit* inUnit) {
     this->name = setPersonName();
     this->appointedUnit = inUnit;
+    this->id = setPersonId();
     info();
 }
 
 Worker::Worker(IUnit* inUnit) {
     this->name = setPersonName();
     this->appointedUnit = inUnit;
+    this->id = setPersonId();
     info();
 }
 

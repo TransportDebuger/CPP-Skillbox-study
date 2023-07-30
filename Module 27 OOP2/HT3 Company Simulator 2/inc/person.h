@@ -9,15 +9,12 @@
 #include "company.h"
 #include "task.h"
 
-int setPersonId();
-std::string setPersonName();
-
 class IUnit;
 
 class IPerson {
 public:
     std::string name;
-    int id = setPersonId();
+    int id;
     IUnit* appointedUnit;
     virtual void info() = 0;
     virtual ~IPerson() = default;

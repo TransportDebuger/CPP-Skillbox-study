@@ -9,15 +9,15 @@
 
 #include "person.h"
 
-std::string setUnitName();
-
 class IUnit {
 public:
-    std::string name;;
-    IUnit* headUnit;
-    IPerson* manager;
+    std::string name;
+    IUnit* headUnit = nullptr;
+    IPerson* manager = nullptr;
     std::vector<IUnit *> childUnit;
+    std::vector<IPerson *> workers;
     virtual void info() = 0;
+    virtual void detailed() = 0;
     virtual ~IUnit() = default;
 };
 
@@ -25,12 +25,14 @@ class Company : public IUnit {
 public:
     Company(IUnit* inParent = nullptr);
     void info() override;
+    void detailed() override;
 };
 
 class Division : public IUnit {
 public:
     Division(IUnit* inParent);
     void info() override;
+    void detailed() override;
 };
 
 class IUnitFactory {
@@ -48,7 +50,5 @@ class DivisionFactory : public IUnitFactory {
 public:
     IUnit* createUnit(IUnit* inParent) override;
 };
-
-
 
 #endif //HT3_COMPANY_SIMULATOR_2_COMPANY_H
