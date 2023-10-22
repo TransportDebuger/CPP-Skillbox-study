@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/build",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I\"/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/inc\" -I\"/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/src\" -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/compsym.dir/src/main.cpp.o -c \"/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/src/main.cpp\"",
+  "file": "/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/src/main.cpp"
+},
+{
+  "directory": "/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/build",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I\"/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/inc\" -I\"/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/src\" -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/compsym.dir/src/person.cpp.o -c \"/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/src/person.cpp\"",
+  "file": "/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/src/person.cpp"
+},
+{
+  "directory": "/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/build",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I\"/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/inc\" -I\"/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/src\" -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/compsym.dir/src/company.cpp.o -c \"/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/src/company.cpp\"",
+  "file": "/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/src/company.cpp"
+},
+{
+  "directory": "/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/build",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I\"/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/inc\" -I\"/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/src\" -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/compsym.dir/src/routines.cpp.o -c \"/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/src/routines.cpp\"",
+  "file": "/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/src/routines.cpp"
+},
+{
+  "directory": "/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/build",
+  "command": "/usr/bin/aarch64-linux-gnu-g++  -I\"/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/inc\" -I\"/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/src\" -O3 -DNDEBUG -std=gnu++17 -o CMakeFiles/compsym.dir/src/task.cpp.o -c \"/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/src/task.cpp\"",
+  "file": "/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/src/task.cpp"
+}
+]

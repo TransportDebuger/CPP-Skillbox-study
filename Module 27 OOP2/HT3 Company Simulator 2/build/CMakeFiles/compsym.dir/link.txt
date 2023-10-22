@@ -1,0 +1,1 @@
+/usr/bin/aarch64-linux-gnu-g++ -O3 -DNDEBUG CMakeFiles/compsym.dir/src/main.cpp.o CMakeFiles/compsym.dir/src/person.cpp.o CMakeFiles/compsym.dir/src/company.cpp.o CMakeFiles/compsym.dir/src/routines.cpp.o CMakeFiles/compsym.dir/src/task.cpp.o -o compsym 

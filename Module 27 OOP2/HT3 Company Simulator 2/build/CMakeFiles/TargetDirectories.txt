@@ -1,0 +1,3 @@
+/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/build/CMakeFiles/rebuild_cache.dir
+/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/build/CMakeFiles/edit_cache.dir
+/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/build/CMakeFiles/compsym.dir

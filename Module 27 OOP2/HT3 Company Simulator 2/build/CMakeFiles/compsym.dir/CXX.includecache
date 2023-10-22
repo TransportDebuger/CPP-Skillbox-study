@@ -1,0 +1,76 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../inc/company.h
+string
+-
+vector
+-
+person.h
+../inc/person.h
+
+../inc/person.h
+string
+-
+company.h
+../inc/company.h
+task.h
+../inc/task.h
+
+../inc/routines.h
+string
+-
+
+../inc/task.h
+
+/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/src/company.cpp
+iostream
+-
+iomanip
+-
+sstream
+-
+company.h
+/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/src/company.h
+routines.h
+/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/src/routines.h
+
+/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/src/main.cpp
+iostream
+-
+company.h
+/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/src/company.h
+person.h
+/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/src/person.h
+task.h
+/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/src/task.h
+
+/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/src/person.cpp
+iostream
+-
+string
+-
+routines.h
+/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/src/routines.h
+company.h
+/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/src/company.h
+person.h
+/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/src/person.h
+
+/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/src/routines.cpp
+iostream
+-
+string
+-
+routines.h
+/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/src/routines.h
+
+/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/src/task.cpp
+task.h
+/home/art/Projects/Skillbox/CPP-Skillbox-study/Module 27 OOP2/HT3 Company Simulator 2/src/task.h
+
