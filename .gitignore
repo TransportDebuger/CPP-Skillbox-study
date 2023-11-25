@@ -1,2 +1,4 @@
 *.exe
-.vscode/*.json
+*.obj
+*.log
+*/*/.vscode/*.*
