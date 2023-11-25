@@ -1,5 +1,6 @@
 *.exe
 *.obj
 *.log
-**/.vscode/
-**/build/
+**/.vscode
+**/.cache
+**/build
