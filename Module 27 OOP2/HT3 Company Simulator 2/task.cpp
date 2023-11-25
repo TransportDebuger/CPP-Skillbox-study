@@ -4,6 +4,6 @@
 #include "task.h"
 
 int setTaskID() {
-   static int tid = 0;
-   return tid;
+    static int tid = 0;
+    return tid;
 };

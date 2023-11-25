@@ -1,17 +1,14 @@
 #include <iostream>
-#include "company.h"
-#include "person.h"
-#include "task.h"
 
-enum navcode{
-    EXIT = 0
-};
+#include "company.h"
+
+enum navcode { EXIT = 0 };
 
 auto* cmp_fctr = new CompanyFactory;
 auto* ceo_fctr = new CEOFactory;
 auto* div_fctr = new DivisionFactory;
 auto* tl_fctr = new TeamleadFactory;
-//auto* wrc_fctr = new WorkerFactory;
+// auto* wrc_fctr = new WorkerFactory;
 
 IUnit* initialize() {
     std::cout << "Company simulator!" << std::endl;
@@ -58,11 +55,12 @@ int action(int inItem, int inCommand, IUnit* inCompany) {
     if (inItem == 0) {
         if (inCommand == 1) inCompany->detailed();
         return inCommand;
-    } else if (inItem==2) {
-        if (inCommand==1) inCompany->childUnit.push_back(addDepartment(inCompany));
-        else inItem = 0;
-    }
-    else if (inItem!=0 && inCommand!=0){
+    } else if (inItem == 2) {
+        if (inCommand == 1)
+            inCompany->childUnit.push_back(addDepartment(inCompany));
+        else
+            inItem = 0;
+    } else if (inItem != 0 && inCommand != 0) {
         inItem = inCommand;
     } else {
         inItem = 0;
@@ -72,26 +70,23 @@ int action(int inItem, int inCommand, IUnit* inCompany) {
 
 int main() {
     IUnit* company = nullptr;
+    int cli, menuitem = 0;
+    bool isExit = false;
+
     if (!company) {
         company = initialize();
     }
-    int cli, menuitem=0;
-    bool isExit = false;
+
     do {
         displayinfo(company);
         displaynavigation(menuitem);
         std::cin >> cli;
-        if (menuitem==0 && cli == EXIT) isExit=true;
-        else menuitem = action(menuitem, cli, company);
+        std::cin.ignore();
+        if (menuitem == 0 && cli == EXIT)
+            isExit = true;
+        else
+            menuitem = action(menuitem, cli, company);
     } while (!isExit);
 
-    //std::cout << "How many departments in company? ";
-    //int deps;
-    //std::cin >> deps;
-    //company->childUnit.resize(3);
-    //for (int i=0; i<deps; ++i) {
-     //   company->childUnit[i] = div_fctr->createUnit(company);
-    //    company->childUnit[i]->manager = tl_fctr->createPerson(company->childUnit[i]);
-    //}
     return 0;
 }

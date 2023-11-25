@@ -10,4 +10,4 @@
 
 std::string setline();
 
-#endif //COMPANY_SIMULATOR_ROUTINES_H
+#endif  // COMPANY_SIMULATOR_ROUTINES_H

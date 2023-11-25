@@ -1,11 +1,13 @@
 //
 // Created by Artem on 29.07.2023.
 //
+#include "person.h"
+
 #include <iostream>
 #include <string>
-#include "routines.h"
+
 #include "company.h"
-#include "person.h"
+#include "routines.h"
 
 int setPersonId() {
     static int id = 1;
@@ -22,7 +24,8 @@ void CEO::info() {
 }
 
 void Teamlead::info() {
-    std::cout << name << " created (pid: " << id << ") and appointed as head of " << appointedUnit->name << std::endl;
+    std::cout << name << " created (pid: " << id << ") and appointed as head of " << appointedUnit->name
+              << std::endl;
 }
 
 void Worker::info() {
@@ -50,14 +53,8 @@ Worker::Worker(IUnit* inUnit) {
     info();
 }
 
-IPerson* CEOFactory::createPerson(IUnit* inUnit) {
-    return new CEO(inUnit);
-}
+IPerson* CEOFactory::createPerson(IUnit* inUnit) { return new CEO(inUnit); }
 
-IPerson* TeamleadFactory::createPerson(IUnit* inUnit) {
-    return new Teamlead(inUnit);
-}
+IPerson* TeamleadFactory::createPerson(IUnit* inUnit) { return new Teamlead(inUnit); }
 
-IPerson* WorkerFactory::createPerson(IUnit* inUnit) {
-    return new Worker(inUnit);
-}
+IPerson* WorkerFactory::createPerson(IUnit* inUnit) { return new Worker(inUnit); }

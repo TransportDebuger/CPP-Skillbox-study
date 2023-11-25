@@ -6,13 +6,12 @@
 #ifndef HT3_COMPANY_SIMULATOR_2_PERSON_H
 #define HT3_COMPANY_SIMULATOR_2_PERSON_H
 
-#include "company.h"
 #include "task.h"
 
 class IUnit;
 
 class IPerson {
-public:
+   public:
     std::string name;
     int id;
     IUnit* appointedUnit;
@@ -21,42 +20,42 @@ public:
 };
 
 class CEO : public IPerson {
-public:
+   public:
     CEO(IUnit* inUnit);
     void info() override;
 };
 
 class Teamlead : public IPerson {
-public:
+   public:
     Teamlead(IUnit* inUnit);
     void info() override;
 };
 
 class Worker : public IPerson {
-public:
+   public:
     Worker(IUnit* inUnit);
     void info() override;
 };
 
 class PersonFactory {
-public:
+   public:
     virtual IPerson* createPerson(IUnit* inUnit) = 0;
     virtual ~PersonFactory() = default;
 };
 
 class CEOFactory : public PersonFactory {
-public:
+   public:
     IPerson* createPerson(IUnit* inUnit) override;
 };
 
 class TeamleadFactory : public PersonFactory {
-public:
+   public:
     IPerson* createPerson(IUnit* inUnit) override;
 };
 
 class WorkerFactory : public PersonFactory {
-public:
+   public:
     IPerson* createPerson(IUnit* inUnit) override;
 };
 
-#endif //HT3_COMPANY_SIMULATOR_2_PERSON_H
+#endif  // HT3_COMPANY_SIMULATOR_2_PERSON_H
