@@ -3,6 +3,6 @@
 *.log
 **/.vscode
 **/.cache
-**/build
+**/build/*.*
 **/.idea
 **/cmake-build-debug
