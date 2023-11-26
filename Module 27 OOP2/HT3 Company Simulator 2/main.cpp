@@ -94,7 +94,6 @@ void displaynavigation(int inItem) {
     } else if (inItem == 3) {
         std::cout << "1) Add task\n";
         std::cout << "2) Show tasks\n";
-        std::cout << "3) Manage tasks\n";
     }
     std::cout << "0) Exit\n";
     std::cout << "\n\n\n=========================================\n";
@@ -115,7 +114,11 @@ int action(int inItem, int inCommand, IUnit* inCompany) {
         else
             inItem = 0;
     } else if (inItem == 3) {
-        std::cout << "Task management\n";
+        if (inCommand == 1) {
+            std::cout << "Task management\n";
+        } else if (inCommand == 1) {
+            std::cout << "Task management\n";
+        }
     } else if (inItem != 0 && inCommand != 0) {
         inItem = inCommand;
     } else {

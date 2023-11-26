@@ -12,6 +12,7 @@ class IPerson {
     std::string name;
     int id;
     IUnit* appointedUnit;
+    Task* task = nullptr;
     virtual void info() = 0;
     virtual ~IPerson() = default;
 };
