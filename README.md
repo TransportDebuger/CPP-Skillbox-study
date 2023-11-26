@@ -9,7 +9,7 @@
 ```
  #include <iostream>
 
-    int main() {
+ int main() {
     int lap = 4;
     int speed = 358;
     int engine = 254;
