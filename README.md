@@ -7,31 +7,31 @@
 Исправьте код программы так, чтобы значение скорости рассчитывалось автоматически.
 Скорость — это сумма показателей двигателя, колёс и руля минус показатели дождя и ветра.
 
- `*#include <iostream> 
- int main() { 
- int lap = 4; 
- int speed = 358; 
- int engine = 254; 
- int wheels = 93; 
- int steerinWheel = 49; 
- int wind = 21; 
- int rain = 17; 
- std::cout << "===================\n"; 
- std::cout << "Супер гонки. Круг " << lap << "\n"; 
- std::cout << "===================\n"; 
- std::cout << "Шумахер (" << speed << ")\n"; 
- std::cout << "===================\n"; 
- std::cout << "Водитель: Шумахер\n"; 
- std::cout << "Скорость: " << speed << "\n"; 
- std::cout << "-------------------\n"; 
- std::cout << "Оснащение\n"; 
- std::cout << "Двигатель: +" << engine << "\n"; 
- std::cout << "Колеса: +" << wheels << "\n"; 
- std::cout << "Руль: +" << steerinWheel << "\n"; 
- std::cout << "-------------------\n"; 
- std::cout << "Действия плохой погоды\n"; 
- std::cout << "Ветер: -" << wind << "\n"; 
- std::cout << "Дождь: -" << rain << "\n"; 
+ `*#include <iostream> <br>
+ int main() {  <br>
+ int lap = 4;  <br>
+ int speed = 358;  <br>
+ int engine = 254;  <br>
+ int wheels = 93;  <br>
+ int steerinWheel = 49; <br> 
+ int wind = 21;  <br>
+ int rain = 17;  <br>
+ std::cout << "===================\n";  <br>
+ std::cout << "Супер гонки. Круг " << lap << "\n";  <br>
+ std::cout << "===================\n";  <br>
+ std::cout << "Шумахер (" << speed << ")\n"; <br> 
+ std::cout << "===================\n";  <br>
+ std::cout << "Водитель: Шумахер\n";  <br>
+ std::cout << "Скорость: " << speed << "\n";  <br>
+ std::cout << "-------------------\n";  <br>
+ std::cout << "Оснащение\n";  <br>
+ std::cout << "Двигатель: +" << engine << "\n";  <br>
+ std::cout << "Колеса: +" << wheels << "\n";  <br>
+ std::cout << "Руль: +" << steerinWheel << "\n";  <br>
+ std::cout << "-------------------\n";  <br>
+ std::cout << "Действия плохой погоды\n";  <br>
+ std::cout << "Ветер: -" << wind << "\n";  <br>
+ std::cout << "Дождь: -" << rain << "\n";  <br>
  }*`
 
  
