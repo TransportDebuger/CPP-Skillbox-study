@@ -1,6 +1,3 @@
-//
-// Created by Artem on 30.07.2023.
-//
 #ifndef COMPANY_SIMULATOR_TASK_H
 #define COMPANY_SIMULATOR_TASK_H
 

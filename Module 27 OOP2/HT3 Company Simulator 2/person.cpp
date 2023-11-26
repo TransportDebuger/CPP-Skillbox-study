@@ -1,11 +1,7 @@
-//
-// Created by Artem on 29.07.2023.
-//
-#include "person.h"
-
 #include <iostream>
 #include <string>
 
+#include "person.h"
 #include "company.h"
 #include "routines.h"
 

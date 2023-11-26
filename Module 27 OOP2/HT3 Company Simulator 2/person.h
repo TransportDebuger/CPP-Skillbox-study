@@ -1,6 +1,3 @@
-//
-// Created by Artem on 29.07.2023.
-//
 #include <string>
 
 #ifndef HT3_COMPANY_SIMULATOR_2_PERSON_H
